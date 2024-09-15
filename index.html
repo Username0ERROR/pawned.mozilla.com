@@ -3,17 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You Have Been Pawned</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>You've Been Pawned</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        button {
+            background-color: #111;
+            color: #0f0;
+            border: 2px solid #0f0;
+            padding: 10px 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #0f0;
+            color: #000;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 50vh; /* Adjusted height to fit within the screen */
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="message">
-            <h1>You Have Been Pawned</h1>
-            <p class="fake-url">pawned.mozilla.com.git</p>
-            <button onclick="window.location.href='https://hackerone.com/mozilla#introduction'">Learn More</button>
-        </div>
-    </div>
+    <h1>You have been pawned</h1>
+    <button onclick="window.location.href='https://hackerone.com/mozilla#introduction';">Proceed</button>
+
+    <!-- Iframe to mask the URL of the fake domain -->
+    <iframe src="https://pawned.mozilla.com"></iframe>
 </body>
 </html>
-
